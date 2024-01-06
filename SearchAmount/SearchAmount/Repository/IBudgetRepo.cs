@@ -8,8 +8,8 @@ public interface IBudgetRepo
 public class Budget
 {
     public int Amount { get; set; }
-     
+
     public string YearMonth { get; set; }
 
-    public int AmountPerDay => Amount / DateTime.DaysInMonth(int.Parse(YearMonth[..4]), int.Parse(YearMonth[4..]));
+    public int AmountPerDay => string.IsNullOrEmpty(YearMonth) ? 0 : Amount / DateTime.DaysInMonth(int.Parse(YearMonth[..4]), int.Parse(YearMonth[4..]));
 }

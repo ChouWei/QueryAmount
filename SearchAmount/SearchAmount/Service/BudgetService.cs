@@ -47,11 +47,7 @@ public class BudgetService
 
     private static Budget GetBudget(List<Budget> result, string startDate)
     {
-        return result.Where(i => i.YearMonth.Equals(startDate)).FirstOrDefault();
+        return result.Where(i => i.YearMonth.Equals(startDate)).FirstOrDefault() ?? new Budget();
     }
-
-    private static Budget GetEndAmount(List<Budget> result, string endDate)
-    {
-        return result.Where(i => i.YearMonth.Equals(endDate)).FirstOrDefault();
-    }
+    
 }

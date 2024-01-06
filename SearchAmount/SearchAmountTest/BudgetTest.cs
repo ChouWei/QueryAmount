@@ -115,4 +115,22 @@ public class BudgetTest
 		var act = _budgetService.Query(start, end);
 		Assert.That(act, Is.EqualTo(expect));
 	}
+	
+	[Test]
+	public void SearchWithoutData()
+	{
+		var start = new DateTime(2024, 5, 1);
+		var end = new DateTime(2024, 5, 5);
+		var expect = 0m;
+		_budgetRepo.GetAll().Returns(new List<Budget>()
+		{
+			new Budget()
+			{
+				YearMonth = "202401",
+				Amount = 3100
+			}
+		});
+		var act = _budgetService.Query(start, end);
+		Assert.That(act, Is.EqualTo(expect));
+	}
 }
