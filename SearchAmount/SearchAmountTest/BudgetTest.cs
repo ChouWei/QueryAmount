@@ -4,7 +4,7 @@ using SearchAmount.Service;
 
 namespace SearchAmountTest;
 
-public class BufgetTest
+public class BudgetTest
 {
     IBudgetRepo _budgetRepo;
     private BudgetService _budgetService;
@@ -91,6 +91,24 @@ public class BufgetTest
 			new Budget()
 			{
 				YearMonth = "202405",
+				Amount = 3100
+			}
+		});
+		var act = _budgetService.Query(start, end);
+		Assert.That(act, Is.EqualTo(expect));
+	}
+
+	[Test]
+	public void InvalidDate()
+	{
+		var start = new DateTime(2024, 10, 1);
+		var end = new DateTime(2024, 5, 5);
+		var expect = 0m;
+		_budgetRepo.GetAll().Returns(new List<Budget>()
+		{
+			new Budget()
+			{
+				YearMonth = "202401",
 				Amount = 3100
 			}
 		});
