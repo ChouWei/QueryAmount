@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAmount", "SearchAmount\SearchAmount.csproj", "{998618D0-5D0E-490A-A224-AF5634547229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAmountTest", "SearchAmountTest\SearchAmountTest.csproj", "{FA4C4D49-8FA2-46D3-8F23-D1A713E82B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{998618D0-5D0E-490A-A224-AF5634547229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998618D0-5D0E-490A-A224-AF5634547229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998618D0-5D0E-490A-A224-AF5634547229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998618D0-5D0E-490A-A224-AF5634547229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4C4D49-8FA2-46D3-8F23-D1A713E82B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4C4D49-8FA2-46D3-8F23-D1A713E82B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4C4D49-8FA2-46D3-8F23-D1A713E82B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4C4D49-8FA2-46D3-8F23-D1A713E82B98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
